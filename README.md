@@ -61,6 +61,6 @@ _Objectives are listed as:_
 
 ### License
 
-*This software is licensed under the MIT License and the **_Mind Your Own Beeswax license._***
+This software is licensed under the MIT License and the **_Mind Your Own Beeswax license._**
 
 Copyright (c) 2016 Tony Fabery, Marty Fitchen, Alvin Ng, and Sam Park
