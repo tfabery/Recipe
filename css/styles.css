@@ -2,9 +2,15 @@
   text-align: center;
   background-color: rgba(125, 201, 227, 0.5);
   color: white;
+  position: fixed;
+  bottom: 40%;
+  left: 15%;
+  right: 15%;
+  width: ;
 }
 .jumbotron p{
-  color: rgba(87, 100, 105, 0.8);
+  color: white;
+
 }
 #results {
   display: none;
@@ -15,9 +21,4 @@
 #results p{
   font-size: 25pt;
   color: rgba(87, 100, 105, 0.8);
-}
-img {
-  display: none;
-  max-width: 500px;
-  margin-bottom: 50px;
 }
