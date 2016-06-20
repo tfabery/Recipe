@@ -1,6 +1,6 @@
 # _Recipe Generator_
 
-#### _Vegetarian Appetizers in under 30 minutes _
+#### _Vegetarian Appetizers in under 30 minutes_
 
 #### By **Tony Fabery**, **Marty Fitchen**, **Alvin Ng**, and **Sam Park**
 
