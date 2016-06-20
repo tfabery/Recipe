@@ -2,31 +2,41 @@
   text-align: center;
   background-color: rgba(125, 201, 227, 0.5);
   color: white;
+  position: fixed;
+  bottom: 40%;
+  left: 15%;
+  right: 15%;
 }
 
 .jumbotron p{
-  color: rgba(87, 100, 105, 0.8);
+  font-size: 150%;
 }
 
-#results {
-  display: none;
-  background-color: rgba(125, 201, 227, 0.5);
-  text-align: center;
-  color: white;
+.jumbotron h1{
+  font-size: 400%;
 }
-#results p{
-  font-size: 25pt;
-  color: rgba(87, 100, 105, 0.8);
+
+.carousel, .carousel:after{
+  position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 0;
 }
-/*
-img {
-  display: none;
-  max-width: 500px;
-  margin-bottom: 50px;
-}*/
+
+.carousel img{
+  width: 100%;
+  height: 100%;
+}
 
 .card-image {
   width: 100%;
+
+.full-screen {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .well {
@@ -36,8 +46,3 @@ img {
 .initial-well-value {
   margin-top: 20px;
 }
-
-/*
-.start-over {
-  margin-bottom: 20px;
-}*/
