@@ -30,8 +30,19 @@
   height: 100%;
 }
 
+.card-image {
+  width: 100%;
+
 .full-screen {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+.well {
+  color: #555555;
+}
+
+.initial-well-value {
+  margin-top: 20px;
 }
