@@ -1,7 +1,10 @@
+//==============================BackEnd==================================
+
+//==============================FrontEnd=================================
 var $item = $('.carousel .item');
 var $wHeight = $(window).height();
 
-$item.height($wHeight); 
+$item.height($wHeight);
 $item.addClass('full-screen');
 
 $('.carousel img').each(function() {
@@ -17,4 +20,10 @@ $('.carousel img').each(function() {
 $(window).on('resize', function (){
   $wHeight = $(window).height();
   $item.height($wHeight);
+});
+
+$(function() {
+  $('form#myForm').submit(function(event) {
+    event.preventDefault();
+  });
 });

@@ -32,6 +32,7 @@
 
 .card-image {
   width: 100%;
+}
 
 .full-screen {
   background-size: cover;
@@ -45,4 +46,8 @@
 
 .initial-well-value {
   margin-top: 20px;
+}
+
+#recipeCards {
+  display: none;
 }
