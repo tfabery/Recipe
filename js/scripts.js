@@ -41,8 +41,11 @@ $(function() {
   });
 
   $('button#showRecipes').click(function () {
+    var cuisine = $("#cuisine").val().toLowerCase();
+    var temperature = $("#temperature").val().toLowerCase();
     $('#recipeCards').show();
     $('#landingPage').hide();
+    $('.col-md-4:not(.' + cuisine + '.' + temperature + ')').hide();
   });
 
 });
