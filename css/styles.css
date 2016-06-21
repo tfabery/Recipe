@@ -62,6 +62,15 @@ body {
   margin-top: 20px;
 }
 
+.social-icons {
+  display: none;
+  margin-left: 5px;
+}
+
+.btn-recipe-card {
+  margin-right: 80px;
+}
+
 #recipeCards {
   display: none;
 }
