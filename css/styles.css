@@ -103,6 +103,15 @@ body {
   background-size: cover;
 }
 
+.social-icons {
+  display: none;
+  margin-left: 5px;
+}
+
+.btn-recipe-card {
+  margin-right: 80px;
+}
+
 #recipeCards {
   display: none;
   margin-top: 1em;
