@@ -61,7 +61,16 @@ body {
   margin-top: 20px;
 }
 
-#landingPage, #landingCarousel {
+.social-icons {
+  display: none;
+  margin-left: 5px;
+}
+
+.btn-recipe-card {
+  margin-right: 80px;
+}
+
+#recipeCards {
   display: none;
   /*position: fixed;
   bottom: 40%;
