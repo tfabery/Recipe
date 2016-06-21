@@ -61,7 +61,7 @@ body {
   margin-top: 20px;
 }
 
-#recipeCards {
+#landingPage, #landingCarousel {
   display: none;
   /*position: fixed;
   bottom: 40%;
