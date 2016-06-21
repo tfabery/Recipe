@@ -1,5 +1,10 @@
 //==============================BackEnd==================================
 
+
+
+
+
+
 //==============================FrontEnd=================================
 
 $(function() {
@@ -27,8 +32,20 @@ $(function() {
   $('.carousel').carousel({
     interval: 300 * 10
   });
-  
-  $('form#myForm').submit(function(event) {
-    event.preventDefault();
+
+  $('button#surveySubmit').click(function () {
+    var cuisine = $("#cuisine").val();
+    var temperature = $("#temperature").val();
+    $('li#selectionOne').text(cuisine);
+    $('li#selectionTwo').text(temperature);
   });
+
+  $('button#showRecipes').click(function () {
+    var cuisine = $("#cuisine").val().toLowerCase();
+    var temperature = $("#temperature").val().toLowerCase();
+    $('#recipeCards').show();
+    $('#landingPage').hide();
+    $('.col-md-4:not(.' + cuisine + '.' + temperature + ')').hide();
+  });
+
 });
