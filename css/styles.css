@@ -5,7 +5,7 @@ body {
 }
 
 @media(min-width:900px) {
-  .jumbotron {
+  .jumbotron, .recipeBanner{
   font-size: 24px;
   line-height: 1.2;
   }
@@ -62,8 +62,50 @@ body {
   margin-top: 20px;
 }
 
+.recipeBanner {
+  display: none;
+  width: 100%;
+  height: 10em;
+  color: white;
+  margin-top: 1em;
+  position: relative;
+}
+
+.recipeBanner h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 250%;
+}
+
+#asianBackground {
+  background-image: url(../img/asian.jpg);
+  background-position: 65% 50%;
+}
+
+#americanBackground {
+  background-image: url(../img/american.jpg);
+  background-position: 70% 70%;
+  background-size: cover;
+}
+
+#europeanBackground {
+  background-image: url(../img/european.jpg);
+  background-position: 0% 60%;
+  background-size: cover;
+}
+
+#latinBackground {
+  background-image: url(../img/latin.jpg);
+  background-position: 20% 40%;
+  background-size: cover;
+}
+
 #recipeCards {
   display: none;
+  margin-top: 1em;
 }
 
 #recipeCards h1 {
