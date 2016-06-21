@@ -4,7 +4,7 @@ body {
 }
 
 @media(min-width:900px) {
-  body {
+  .jumbotron {
   font-size: 24px;
   line-height: 1.2;
   }
@@ -61,7 +61,7 @@ body {
   margin-top: 20px;
 }
 
-#landingPage, #landingCarousel {
+#recipeCards {
   display: none;
   /*position: fixed;
   bottom: 40%;
