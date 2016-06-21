@@ -1,6 +1,7 @@
 body {
   font-size: 16px;
   line-height: 1.2;
+  background-color: rgba(125, 201, 227, 0.5);
 }
 
 @media(min-width:900px) {
@@ -72,8 +73,37 @@ body {
 
 #recipeCards {
   display: none;
-  /*position: fixed;
-  bottom: 40%;
-  left: 15%;
-  right: 15%;*/
+}
+
+#recipeCards h1 {
+  text-align: center;
+  color: white;
+}
+
+.ad {
+  padding: 0;
+}
+
+.ad h3 {
+  padding-top: 2%;
+  color: red;
+}
+
+.ad  button {
+  margin-bottom: 2%;
+}
+
+.ad div {
+  border: black;
+  border-style: solid;
+  border-width: thin;
+  text-align: center;
+  background-color: white;
+  margin-bottom: 3%;
+}
+
+.ad img {
+  width: 100%;
+  padding-left: 2%;
+  padding-right: 2%;
 }
