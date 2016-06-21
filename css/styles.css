@@ -83,6 +83,7 @@ body {
 #asianBackground {
   background-image: url(../img/asian.jpg);
   background-position: 65% 50%;
+  /*background-size: cover;*/
 }
 
 #americanBackground {
