@@ -46,6 +46,7 @@ $(function() {
     $('#recipeCards').show();
     $('#landingPage').hide();
     $('.col-md-4:not(.' + cuisine + '.' + temperature + ')').hide();
+    $('.ad').show();
   });
 
 });
