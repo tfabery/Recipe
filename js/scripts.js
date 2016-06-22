@@ -1,6 +1,4 @@
 //==============================BackEnd==================================
-var apiKey = '6f1739ee3b';
-
 function callOtherDomain(name){
   var url = 'http://www.supermarketapi.com/api.asmx/COMMERCIAL_SearchByProductName?APIKEY=6f1739ee3b&ItemName=' + name;
   var request = new XMLHttpRequest();
@@ -21,14 +19,22 @@ function callOtherDomain(name){
 }
 
 function addPopover(span){
-  var ingredient = $(span).text();
-  var itemName = ingredient[0].toUpperCase() + ingredient.substring(1);
-  // $(span).tooltip();
-  $(span).attr('data-toggle', 'popover');
-  $(span).attr('data-placement', 'top');
-  $(span).attr('data-content', "Price: " + '$' + callOtherDomain(itemName));
-  $(span).attr('title', itemName);
-  $(span).popover();
+  $(span).each(function() {
+    var ingredient = $(this).text();
+    var itemName = ingredient[0].toUpperCase() + ingredient.substring(1);
+    var price = callOtherDomain(itemName)
+    alert(price === 0.00);
+    if (isNaN(price) || price === 0.00) {
+      $(this).attr('class', 'noData');
+    }
+    else {
+      $(this).attr('data-toggle', 'popover');
+      $(this).attr('data-placement', 'top');
+      $(this).attr('data-content', "Price: " + '$' + price);
+      $(this).attr('title', itemName);
+      $(this).popover();
+    }
+  })
 }
 //==============================FrontEnd=================================
 $(function() {
@@ -72,6 +78,6 @@ $(function() {
     $('#landingPage').hide();
     $('.col-md-4:not(.' + cuisine + '.' + temperature + ')').hide();
     $('.ad').show();
-    addPopover('span.ingredient');
+    addPopover(('.' + cuisine + '.' + temperature) + ' span.ingredient');
   });
 });

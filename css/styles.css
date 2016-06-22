@@ -167,3 +167,9 @@ body {
 .print  {
   background-color: white;
 }
+
+.noData {
+  color: default;
+  text-decoration: none;
+  font-weight: normal;
+}
