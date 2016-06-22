@@ -1,7 +1,7 @@
 body {
   font-size: 16px;
   line-height: 1.2;
-  background-color: rgba(125, 201, 227, 0.5);
+  background-color: rgba(125, 201, 227, 0.3);
 }
 
 @media(min-width:900px) {
@@ -149,4 +149,14 @@ body {
   width: 100%;
   padding-left: 2%;
   padding-right: 2%;
+}
+
+.ingredient:hover {
+  cursor: pointer;
+}
+
+.ingredient {
+  color: rgba(0, 102, 102, 0.5);
+  text-decoration: underline;
+  font-weight: bold;
 }
