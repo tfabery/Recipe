@@ -105,12 +105,14 @@ body {
 }
 
 .social-icons {
-  display: none;
-  margin-left: 5px;
+  width: 30px;
+  height: 30px;
+  /*display: none;*/
+  /*margin-left: 5px;*/
 }
 
 .btn-recipe-card {
-  margin-right: 80px;
+  margin-right: 70px;
 }
 
 #recipeCards {
