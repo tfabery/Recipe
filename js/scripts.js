@@ -23,12 +23,12 @@ function addPopover(span){
     var ingredient = $(this).text();
     var itemName = ingredient[0].toUpperCase() + ingredient.substring(1);
     var price = callOtherDomain(itemName)
-    alert(price === 0.00);
-    if (isNaN(price) || price === 0.00) {
+    if (isNaN(price) || price === '0.00') {
       $(this).attr('class', 'noData');
     }
     else {
       $(this).attr('data-toggle', 'popover');
+      $(this).attr('data-trigger', 'hover');
       $(this).attr('data-placement', 'top');
       $(this).attr('data-content', "Price: " + '$' + price);
       $(this).attr('title', itemName);
