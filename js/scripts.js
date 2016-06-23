@@ -16,7 +16,7 @@ function callOtherDomain(name){
     priceArray.sort(function(a, b) {return a-b});
     return parseFloat(priceArray[0]).toFixed(2);
   }
-}
+};
 
 function addPopover(span){
   $(span).each(function() {
@@ -34,28 +34,22 @@ function addPopover(span){
       $(this).attr('title', itemName);
       $(this).popover();
     }
-  })
-}
+  });
+};
 
-function Favorite(recipe) {
-  this.recipes = [];
-  var name = $(this).parent().parent().parent().sibling('.title').find('h4').text();
-
-}
-
-function Recipe(name, cuisine, temperature) {
+function Favorite(name, cuisine, temperature) {
   this.name = name;
   this.cuisine = cuisine;
   this.temperature = temperature;
-}
+};
 
-function addFavorite(name) {
-  var html = name.toLowerCase().split(' ').join('-');
-  $(".favorites ul").append("<li><a href=" + html + ".html>" + name + "(" + cuisine + ")"+ "</a></li>");
-}
-
+Favorite.prototype.addFavorite = function () {
+  var html = this.name.toLowerCase().split(' ').join('-');
+  $(".favorites ul").append("<li><a href=" + html + ".html>" + this.name + "(" + this.cuisine + ", " + this.temperature + ")"+ "</a></li>");
+};
 //==============================FrontEnd=================================
 $(function() {
+  var myFavorite = new Favorite();
   var $item = $('.carousel .carousel-item');
   var $wHeight = $(window).height();
 
@@ -100,7 +94,13 @@ $(function() {
   });
 
   $('button.fav').click(function () {
-    alert($(this.parent().parent().parent().parent().attr('class')));
+    alert($(this).parent().parent().parent().parent().children().attr('class', 'title').text());
+    // var name = $(this).parent().parent().parent().sibling('.title').find('h4').val();
+    var cuisineTemp = $(this).parent().parent().parent().parent().parent().attr('class').split(' ');
+    var cuisine = cuisineTemp[1];
+    var temperature = cuisineTemp[2];
+    var recipe = new Favorite(name, cuisine, temperature);
+    recipe.addFavorite();
   });
 });
 
