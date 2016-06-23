@@ -231,3 +231,7 @@ body {
 .tag {
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
+
+.fav {
+  margin-left: 3px;
+}
