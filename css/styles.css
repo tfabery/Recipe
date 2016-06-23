@@ -4,6 +4,12 @@ body {
   background-color: rgba(125, 201, 227, 0.3);
 }
 
+@media(max-width:600px) {
+  .logo {
+  width: 60%;
+  }
+}
+
 @media(min-width:900px) {
   .jumbotron, .recipeBanner{
   font-size: 24px;
@@ -23,6 +29,8 @@ body {
 
 .jumbotron p{
   font-size: 120%;
+  margin-bottom: 40px;
+  letter-spacing: 10px;
 }
 
 .jumbotron h1{
@@ -172,4 +180,12 @@ body {
   color: default;
   text-decoration: none;
   font-weight: normal;
+}
+
+.logo {
+  margin-bottom: 1em;
+}
+
+.tag {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
