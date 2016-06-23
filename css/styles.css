@@ -216,14 +216,3 @@ body {
 .tag {
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
-
-.logo-recipe-page  {
-  display: block;
-  margin-top: 1em;
-  /*margin: auto;*/
-  /*width: 18%;
-  height: 18%;*/
-  /*top: 50%;*/
-  left: 50%;
-  /*transform: translate(50%, 5%);*/
-}
