@@ -5,37 +5,52 @@ body {
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
 
-@media(max-width:600px) {
+@media(max-width:700px) {
   .logo {
-  width: 60%;
-  }
-}
-
-@media(max-width:600px) {
-  .logo-rec-page {
-  width: 60%;
+    width: 60%;
   }
 }
 
 @media(min-width:900px) {
   .jumbotron, .recipeBanner{
-  font-size: 24px;
-  line-height: 1.2;
+    font-size: 24px;
+    line-height: 1.2;
+  }
+  .recipeBanner .centering {
+    font-size: 24px;
+    line-height: 1.2;
+  }
+}
+
+@media(max-width:700px) {
+  .logo-rec-page {
+    width: 60%;
   }
 }
 
 @media(max-height:600px) {
   .jumbotron {
-  position: fixed;
-  top: 10%;
-  left: 15%;
-  right: 15%;
-  padding-bottom: 50%;
+    position: fixed;
+    top: 10%;
+    left: 15%;
+    right: 15%;
+    padding-bottom: 50%;
   }
   .logo {
     width: 25%;
   }
 }
+
+@media(max-height:600px) {
+.logo-rec-page {
+  width: 40%;
+  }
+.recipeBanner {
+  padding-bottom: 50%;
+  }
+}
+
+
 
 .jumbotron{
   text-align: center;
@@ -51,10 +66,6 @@ body {
   font-size: 120%;
   margin-bottom: 40px;
   letter-spacing: 10px;
-}
-
-.jumbotron h1{
-  font-size: 250%;
 }
 
 .carousel, .carousel:after{
@@ -106,12 +117,17 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  font-size: 250%;
 }
 
-.space-below {
-  width: 250px;
-  margin-bottom: .3em;
+.recipeBanner p{
+  font-size: 150%;
+  margin-bottom: 40px;
+  letter-spacing: 10px;
+}
+
+.logo-rec-page {
+  width: 40%;
+  margin-bottom: 1em;
 }
 
 #asianBackground {
