@@ -130,6 +130,10 @@ body {
   margin-bottom: 1em;
 }
 
+.logo-rec-page:hover {
+  cursor: pointer;
+}
+
 #asianBackground {
   background-image: url(../img/asian.jpg);
   background-position: 65% 50%;
@@ -238,4 +242,13 @@ body {
 
 .ad-exit  {
   float: right;
+}
+
+.favorites {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+.favorites p{
+  font-weight: bold;
+  padding-top: 2%;
 }
