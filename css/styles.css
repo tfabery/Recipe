@@ -24,12 +24,25 @@ body {
   }
 }
 
+@media(max-height:600px) {
+  .jumbotron {
+  position: fixed;
+  top: 10%;
+  left: 15%;
+  right: 15%;
+  padding-bottom: 50%;
+  }
+  .logo {
+    width: 25%;
+  }
+}
+
 .jumbotron{
   text-align: center;
   background-color: rgba(125, 201, 227, 0.5);
   color: white;
   position: fixed;
-  bottom: 40%;
+  bottom: 30%;
   left: 15%;
   right: 15%;
 }
