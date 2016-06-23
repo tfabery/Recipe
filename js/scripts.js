@@ -75,6 +75,7 @@ $(function() {
     var temperature = $("#temperature").val().toLowerCase();
     $('.recipeBanner').attr('id', (cuisine + 'Background')).show();
     $('#recipeCards').show();
+    $('.logo-rec-page').show();
     $('#landingPage').hide();
     $('.col-md-4:not(.' + cuisine + '.' + temperature + ')').hide();
     $('.ad').show();
