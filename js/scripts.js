@@ -36,6 +36,24 @@ function addPopover(span){
     }
   })
 }
+
+function Favorite(recipe) {
+  this.recipes = [];
+  var name = $(this).parent().parent().parent().sibling('.title').find('h4').text();
+
+}
+
+function Recipe(name, cuisine, temperature) {
+  this.name = name;
+  this.cuisine = cuisine;
+  this.temperature = temperature;
+}
+
+function addFavorite(name) {
+  var html = name.toLowerCase().split(' ').join('-');
+  $(".favorites ul").append("<li><a href=" + html + ".html>" + name + "(" + cuisine + ")"+ "</a></li>");
+}
+
 //==============================FrontEnd=================================
 $(function() {
   var $item = $('.carousel .carousel-item');
@@ -79,6 +97,10 @@ $(function() {
     $('.col-md-4:not(.' + cuisine + '.' + temperature + ')').hide();
     $('.ad').show();
     addPopover(('.' + cuisine + '.' + temperature) + ' span.ingredient');
+  });
+
+  $('button.fav').click(function () {
+    alert($(this.parent().parent().parent().parent().attr('class')));
   });
 });
 
