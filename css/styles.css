@@ -39,10 +39,10 @@ body {
     top: 10%;
     left: 15%;
     right: 15%;
-    padding-bottom: 50%;
+    padding-bottom: 100%;
   }
   .logo {
-    width: 25%;
+    width: 50%;
   }
   .logo-rec-page {
     width: 30%;
@@ -63,7 +63,7 @@ body {
 }
 
 .jumbotron p{
-  font-size: 120%;
+  font-size: 150%;
   margin-bottom: 40px;
   letter-spacing: 10px;
 }
