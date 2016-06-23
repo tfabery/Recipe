@@ -37,15 +37,14 @@ function addPopover(span){
   });
 };
 
-function Favorite(name, cuisine, temperature) {
+function Favorite(name, type) {
   this.name = name;
-  this.cuisine = cuisine;
-  this.temperature = temperature;
+  this.type = type;
 };
 
 Favorite.prototype.addFavorite = function () {
   var html = this.name.toLowerCase().split(' ').join('-');
-  $(".favorites ul").append("<li><a href=" + html + ".html>" + this.name + "(" + this.cuisine + ", " + this.temperature + ")"+ "</a></li>");
+  $(".favorites ul").append("<li><a href=" + html + ".html target='_blank'>" + this.name + "(" + this.type + ")"+ "</a></li>");
 };
 //==============================FrontEnd=================================
 $(function() {
@@ -85,22 +84,30 @@ $(function() {
   $('button#showRecipes').click(function () {
     var cuisine = $("#cuisine").val().toLowerCase();
     var temperature = $("#temperature").val().toLowerCase();
-    $('.recipeBanner').attr('id', (cuisine + 'Background')).show();
-    $('#recipeCards').show();
-    $('#landingPage').hide();
-    $('.col-md-4:not(.' + cuisine + '.' + temperature + ')').hide();
-    $('.ad').show();
+    $('.recipeBanner').attr('id', (cuisine + 'Background')).toggle();
+    $('#recipeCards').toggle();
+    $('#landingPage').toggle();
+    $('.col-md-4:not(.' + cuisine + '.' + temperature + ')').toggle();
+    $('.ad').toggle();
     addPopover(('.' + cuisine + '.' + temperature) + ' span.ingredient');
   });
 
   $('button.fav').click(function () {
-    alert($(this).parent().parent().parent().parent().children().attr('class', 'title').text());
-    // var name = $(this).parent().parent().parent().sibling('.title').find('h4').val();
-    var cuisineTemp = $(this).parent().parent().parent().parent().parent().attr('class').split(' ');
-    var cuisine = cuisineTemp[1];
-    var temperature = cuisineTemp[2];
-    var recipe = new Favorite(name, cuisine, temperature);
+    var name = $(this).parent().parent().parent().siblings('.title').find('h4').text();
+    var type = $(this).parent().parent().parent().siblings('.title').find('h6').text();
+    var recipe = new Favorite(name, type);
     recipe.addFavorite();
+  });
+
+  $('img.logo-rec-page').click(function () {
+    var cuisine = $("#cuisine").val().toLowerCase();
+    var temperature = $("#temperature").val().toLowerCase();
+    $('.recipeBanner').toggle();
+    $('#recipeCards').toggle();
+    $('#landingPage').toggle();
+    $('.col-md-4:not(.' + cuisine + '.' + temperature + ')').toggle();
+    $('.ad').toggle();
+    $('form').trigger('reset');
   });
 });
 
